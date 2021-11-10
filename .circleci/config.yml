@@ -1,17 +1,9 @@
-version: 2.1
+version: 2.0
 
 jobs:
-  echo:
+  build:
     docker:
-      - image: cimg/base:stable
+      - image: cimb/base:stable
+    resource_class: small
     steps:
-      - run:
-          name: Greet
-          command: echo "I love ${COLOR} builds."
-          environment:
-            COLOR: "green"
-
-workflows:
-  main:
-    jobs:
-      - echo
+      - run: echo "Hello CircleCI 2.0"
