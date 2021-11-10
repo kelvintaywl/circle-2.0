@@ -3,7 +3,7 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: cimb/base:stable
+      - image: cimg/base:stable
     resource_class: small
     steps:
       - run: echo "Hello CircleCI 2.0"
