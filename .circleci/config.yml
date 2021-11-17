@@ -8,3 +8,17 @@ jobs:
     steps:
       - run: echo "Hello CircleCI 2.0"
       - run: env
+  test:
+    docker:
+      - image: cimg/base:stable
+    resource_class: small
+    steps:
+      - run: echo "Hello CircleCI 2.0 for test"
+
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
