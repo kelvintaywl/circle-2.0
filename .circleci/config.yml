@@ -7,3 +7,4 @@ jobs:
     resource_class: small
     steps:
       - run: echo "Hello CircleCI 2.0"
+      - run: env
